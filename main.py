@@ -63,8 +63,8 @@ def image_to_sheet(image):
                     "rowData": [
                         pixelmap_to_row(pixelmap, width, row) for row in range(height)
                     ],
-                    "rowMetadata": [{"pixelSize": 1} for _ in range(width)],
-                    "columnMetadata": [{"pixelSize": 1} for _ in range(height)],
+                    "rowMetadata": [{"pixelSize": 1} for _ in range(height)],
+                    "columnMetadata": [{"pixelSize": 1} for _ in range(width)],
                 }
             ],
         }
