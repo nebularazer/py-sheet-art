@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "py-sheet-art"
+version = "0.1.0"
+description = ""
+authors = ["None"]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+Pillow = "^7.2.0"
+google-api-python-client = "^1.9.3"
+google-auth-httplib2 = "^0.0.4"
+google-auth-oauthlib = "^0.4.1"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.8.3"
+ipython = "^7.16.1"
+mypy = "^0.782"
+pydocstyle = "^5.0.2"
+rope = "^0.17.0"
+
+[tool.black]
+skip-string-normalization = false
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+/(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+'''
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
